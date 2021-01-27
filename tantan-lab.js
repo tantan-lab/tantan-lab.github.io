@@ -1,5 +1,5 @@
 function ohayou() {
-    alert("Hello!");
+    alert("ごめん!まだできない！");
   }
 
   
