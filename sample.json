@@ -1,15 +1,1 @@
-[
-    {
-      "list": "リストA",
-      "content": "コンテンツA"
-    },
-    {
-      "list": "リストB",
-      "content": "コンテンツB"
-    },
-    {
-      "list": "リストC",
-      "content": "コンテンツC"
-    }
-  ]
-  
+alert("Hello!!");
