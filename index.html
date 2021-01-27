@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="Progate_test1.css">
   </head>
   <body>
+
+    <!-- ヘッダー　オレンジバー -->
     <div class="header">
       <div class="header-logo">tantan-lab</div>
       <div class="header-list">
@@ -18,13 +20,17 @@
       </div>
     </div>
 
+    <!-- メイン -->
     <div class="main">
+
+        <!-- ハローワールド -->
       <div class="copy-container">
         <h1>HELLO WORLD<span>.</span></h1>
         <h2>熱中症の世界へようこそ</h2>
         <h2>このサイトはTANNOによって書かれています</h2>
       </div>
       
+      <!-- 学べるWBGT -->
       <div class="contents">
         <h3 class="section-title">学べるWBGT</h3>
         <div class="contents-item">
@@ -44,29 +50,30 @@
           <p>インフルエンザ予防にも</p>
         </div>
       </div>
-     <dl id="wrap">
-      <script type="text/javascript">
-        $(function(){
-          $.getJSON("sample.json", function(sample_list){
-            for(var i in sample_list){
-              var h = '<dt>'
-                    + sample_list[i].list
-                    + '</dt>'
-                    + '<dd>'
-                    + sample_list[i].content
-                    + '</dd>';
-              $("dl#wrap").append(h);
-            }
-          });
-        });
-      </script>
-    </dl>
+
       
       <!-- 127追加 -->
+      <div class="contents">
+        <h3 class="section-title">学べるWBGT</h3>
+        <div class="contents-item">
+        </div>
+      </div>
       <script src="sample.js">
       </script>
-      
-      
+
+
+      <head>
+          <title>JavaScript Sample</title>
+          <script src="tantan-lab.js"> </script>
+      </head>
+
+      <body>
+      <input type="button" value="OK" onclick="ohayou()">
+      </body>
+      </html>
+
+
+      <!-- お問い合わせ -->
       <div class="contact-form">
         <h3 class="section-title">お問い合わせ</h3>
         <p>メールアドレス（必須）</p>
@@ -84,6 +91,7 @@
       </div>
     </div>
 
+    <!-- フッター　オレンジバー -->
     <div class="footer">
       <div class="footer-logo">tantan-lab</div>
       <div class="footer-list">
