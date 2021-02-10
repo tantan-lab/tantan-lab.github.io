@@ -207,7 +207,7 @@ function getJSON() {
 
  }
  };
- req.open("GET", "sample2.json", false); // HTTPメソッドとアクセスするサーバーのURLを指定
+ req.open("GET", "sample.json", false); // HTTPメソッドとアクセスするサーバーのURLを指定
  req.send(null); // 実際にサーバーへリクエストを送信
 }
 </script>
@@ -215,7 +215,29 @@ function getJSON() {
 <body>
 <input type="button" value="JSONファイルを取得し、内容をブラウザのコンソールへ出力" onclick="getJSON();">
 </body>
-</html>
+
+
+
+<head>
+<meta charset="UTF-8">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<script>
+$(function() {
+  $.getJSON("data.json" , function(data) {
+    var
+      ulObj = $("#demo"),
+      len = data.length;
+
+    for(var i = 0; i < len; i++) {
+      ulObj.append($("<li>").attr({"id":data[i].id}).text(data[i].name));
+    }
+  });
+});
+</script>
+</head>
+<body>
+<ul id="demo"></ul>
+</body>
 
 
 
