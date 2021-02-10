@@ -258,8 +258,18 @@ $(function() {
         ulObj = $("#demo"),
         len = data.length;
   
-      for(var i = 0; i < len; i++) {
+      for(var i = 0; i < len; i++) 
+      {
         ulObj.append($("<li>").attr({"id":data[i].id}).text(data[i].name));
+
+        console.log(temp);
+        console.log(hsrisk);
+        console.log(rhumid);
+        console.log(client_id);
+        console.log(timestamp);
+        console.log(drisk);
+        console.log(WBGT);
+
       }
     });
   });
