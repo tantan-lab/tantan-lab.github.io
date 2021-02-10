@@ -248,7 +248,26 @@ $(function() {
 </body>
 
 
-
+<head>
+  <meta charset="UTF-8">
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+  <script>
+  $(function() {
+    $.getJSON("data2.json" , function(data) {
+      var
+        ulObj = $("#demo"),
+        len = data.length;
+  
+      for(var i = 0; i < len; i++) {
+        ulObj.append($("<li>").attr({"id":data[i].id}).text(data[i].name));
+      }
+    });
+  });
+  </script>
+  </head>
+  <body>
+  <ul id="demo"></ul>
+  </body>
 
 
 
