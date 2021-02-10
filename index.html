@@ -188,6 +188,35 @@
         </script>
       </body>
 
+    
+　<!--20210210 追加-->
+<title>html5 + js で json ファイルにアクセスしてデータを取得する</title>
+<script>
+function getJSON() {
+ var req = new XMLHttpRequest(); // XMLHttpRequest オブジェクトを生成する
+ req.onreadystatechange = function() { // XMLHttpRequest オブジェクトの状態が変化した際に呼び出されるイベントハンドラ
+ if(req.readyState == 4 && req.status == 200){ // サーバーからのレスポンスが完了し、かつ、通信が正常に終了した場合
+
+ var data = JSON.parse(req.responseText); // 取得した JSON ファイルの中身を変数へ格納
+ var len = data.length; // JSON のデータ数を取得
+
+ // JSON のデータ数分処理
+ for(var i=0; i<len; i++) {
+ console.log("id: " + data[i].id + ", name: " + data[i].name);
+ }
+
+ }
+ };
+ req.open("GET", "sample.json", false); // HTTPメソッドとアクセスするサーバーのURLを指定
+ req.send(null); // 実際にサーバーへリクエストを送信
+}
+</script>
+
+<body>
+<input type="button" value="JSONファイルを取得し、内容をブラウザのコンソールへ出力" onclick="getJSON();">
+</body>
+</html>
+
 
 
 
@@ -224,6 +253,3 @@
     </div>
   </body>
 </html>
-
-
-
