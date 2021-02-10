@@ -1,0 +1,29 @@
+[
+        {
+            "temp":"23.1",
+            "hsrisk":0,
+            "rhumid":"52.1",
+            "client_id":"352656101505306",
+            "timestamp":1612941110445,
+            "drisk":3,
+            "WBGT":"19.7"
+        },
+        {
+            "temp":"25.7",
+            "hsrisk":1,
+            "rhumid":"52.6",
+            "client_id":"352656101505306",
+            "timestamp":1612847368464,
+            "drisk":3,
+            "WBGT":"22.1"
+        },
+        {
+            "temp":"25.8",
+            "hsrisk":1,
+            "rhumid":"52.6",
+            "client_id":"352656101505306",
+            "timestamp":1612847308434,
+            "drisk":3,
+            "WBGT":"22.2"
+        }
+]
