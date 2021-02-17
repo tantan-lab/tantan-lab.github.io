@@ -52,14 +52,15 @@
         </div>
       </div>
 
-      
-      <!-- 127追加 -->
-      <div class="contents">
-        <h3 class="section-title">学べるWBGT</h3>
-        <div class="contents-item">
-        </div>
-      </div>
-      </script>
+
+
+
+
+
+
+
+
+
 
 
       <head>
@@ -231,7 +232,7 @@ function getJSON() {
 
 
 <head>
-  <h3 class="section-title">"data.jsonを参照してリスト表示"</h3>
+  <h3 class="section-title">data.jsonを参照してリスト表示</h3>
 <meta charset="UTF-8">
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 <script>
@@ -254,7 +255,7 @@ $(function() {
 
 
 <head>
-  <h3 class="section-title">"data２.jsonを参照してリスト表示"</h3>
+  <h3 class="section-title">data２.jsonを参照してリスト表示</h3>
   <meta charset="UTF-8">
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
   <script>
@@ -262,13 +263,13 @@ $(function() {
     $.getJSON("data2.json" , function(data) {
       var
         ulObj = $("#demo"),
-        len = data.length;
+        len = data.length;　　//lengthがおかしい？
   
       for(var i = 0; i < len; i++) 
       {
         ulObj.append($("<li>").attr({"id":data[i].id}).text(data[i].name));
 
-        console.log(temp[i]);
+        console.log(items.temp[i]);
         console.log(hsrisk[i]);
         console.log(rhumid[i]);
         console.log(client_id[i]);
@@ -285,6 +286,19 @@ $(function() {
   <body>
   <ul id="demo"></ul>
   </body>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
