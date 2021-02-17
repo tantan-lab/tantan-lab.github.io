@@ -1,12 +1,15 @@
-[
+
+{
+    "Items":
+    [
         {
-            "temp":"23.1",
+            "temp":23.1,
             "hsrisk":0,
-            "rhumid":"52.1",
-            "client_id":"352656101505306",
+            "rhumid":52.1,
+            "client_id":352656101505306,
             "timestamp":1612941110445,
             "drisk":3,
-            "WBGT":"19.7"
+            "WBGT":19.7
         },
         {
             "temp":"25.7",
@@ -26,4 +29,17 @@
             "drisk":3,
             "WBGT":"22.2"
         }
-]
+    ],
+    "Count":3,
+    "ScannedCount":3,
+    "LastEvaluatedKey":
+    {
+        "client_id":"352656101505306",
+        "timestamp":1612847308434
+    }
+}
+
+    
+
+
+    
