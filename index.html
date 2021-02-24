@@ -351,16 +351,7 @@ $(function() {
   
       for(var i = 0; i < len; i++) 
       {
-        ulObj.append($("<li>").attr({"id":data[i].id}).text(data[i].name));
-
-        console.log(items.temp[i]);
-        console.log(hsrisk[i]);
-        console.log(rhumid[i]);
-        console.log(client_id[i]);
-        console.log(timestamp[i]);
-        console.log(drisk[i]);
-        console.log(WBGT[i]);
-        console.log("Galileo");
+        ulObj.append($("<li>").attr(data[i].key).text(data[i].value));  ////0224 editted
 
       }
     });
