@@ -139,6 +139,7 @@
           // table要素を生成
          
           var table = document.createElement('table');
+          console.log("test");    //console test
     
           // ヘッダーを作成
           var tr = document.createElement('tr');
@@ -150,7 +151,9 @@
                 // th要素をtr要素の子要素に追加
                 tr.appendChild(th);
 
-                console.log(key);   //0224 consoleで途中確認　keyとは
+                console.log(json[0]);   //0224 consoleで途中確認　keyとは
+                console.log(key);
+                console.log(th);
                 }
             // tr要素をtable要素の子要素に追加
             table.appendChild(tr);
