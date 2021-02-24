@@ -155,12 +155,14 @@
                 
                 
                 //0224 consoleで途中確認　keyとは
+                console.log("jsonとは");
+                console.log(json);
+                console.log("keyとは");
                 console.log(key);
-                console.log(th);
+                console.log("key in json[0]とは");
+                console.log(key in json[0]);
                 }
-                console.log(json[0]);
-                console.log(json[1]);
-                console.log(json[2]);
+
 
 
             // tr要素をtable要素の子要素に追加
@@ -259,7 +261,6 @@
             console.log(json);
 
             // table要素を生成
-            
             var table = document.createElement('table');
         
             // ヘッダーを作成
@@ -290,10 +291,6 @@
                 }
             }
 
-            //console で確認
-            console.log(json[0]);
-            console.log(json[1]);
-            console.log(json[2]);
 
             // tr要素をtable要素の子要素に追加
             table.appendChild(tr);
