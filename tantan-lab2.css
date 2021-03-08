@@ -4,6 +4,23 @@ div#paging
   right:45%;
 }
 
+
+#wrapper {
+  width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.left-column {
+  width: 30%;
+}
+
+.right-column {
+  width: 70%;
+}
+
+
 div#pagingbox{
   background: #FFF;
 }
@@ -29,4 +46,5 @@ footer{
   width: 100%;
   background-color: #C0C0C0;
   padding: 15px 0;
+
 }
