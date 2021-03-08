@@ -1,16 +1,14 @@
-
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>tantan-lab</title>
-    <link rel="stylesheet" href="Progate_test1.css">
-    <link rel="stylesheet" href="tantan-lab2.css">
+    <link rel="stylesheet" href="Progate_test1.css" />
+    <link rel="stylesheet" href="tantan-lab2.css" />
   </head>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 
   <body>
-
     <!-- ヘッダー　オレンジバー -->
     <div class="header">
       <div class="header-logo">tantan-lab</div>
@@ -25,375 +23,41 @@
 
     <!-- メイン -->
     <div class="main">
-
-        <!-- ハローワールド -->
+      <!-- ハローワールド -->
       <div class="copy-container">
         <h1>HELLO WORLD<span>.</span></h1>
         <h2>熱中症の世界へようこそ</h2>
         <h2>このサイトはTANNOによって書かれています</h2>
       </div>
-      
+
       <!-- 学べるWBGT -->
       <div class="contents">
         <h3 class="section-title">学べるWBGT</h3>
         <div class="contents-item">
-          <img src="https://s3-ap-northeast-1.amazonaws.com/progate/shared/images/lesson/html/study/html.svg">
+          <img
+            src="https://s3-ap-northeast-1.amazonaws.com/progate/shared/images/lesson/html/study/html.svg"
+          />
           <p>暑さ指数</p>
         </div>
         <div class="contents-item">
-          <img src="https://s3-ap-northeast-1.amazonaws.com/progate/shared/images/lesson/html/study/php.svg">
+          <img
+            src="https://s3-ap-northeast-1.amazonaws.com/progate/shared/images/lesson/html/study/php.svg"
+          />
           <p>OS-１</p>
         </div>
         <div class="contents-item">
-          <img src="https://s3-ap-northeast-1.amazonaws.com/progate/shared/images/lesson/html/study/ruby.svg">
+          <img
+            src="https://s3-ap-northeast-1.amazonaws.com/progate/shared/images/lesson/html/study/ruby.svg"
+          />
           <p>黒球温度</p>
         </div>
         <div class="contents-item">
-          <img src="https://s3-ap-northeast-1.amazonaws.com/progate/shared/images/lesson/html/study/swift.svg">
+          <img
+            src="https://s3-ap-northeast-1.amazonaws.com/progate/shared/images/lesson/html/study/swift.svg"
+          />
           <p>インフルエンザ予防にも</p>
         </div>
       </div>
-
-
-
-
-
-
-
-
-
-
-
-
-      <head>
-        <h3 class="section-title">JSアラートボタン</h3>
-          <title>JavaScript Sample</title>
-          <script src="tantan-lab.js"> </script>
-      </head>
-
-      <body>
-      <input type="button" value="OK" onclick="ohayou()">
-      </body>
-      </html>
-
-
-
-      <h3 class="section-title">テーブル生成</h3>
-
-      <body>
-        <!--テーブル生成位置-->
-        <div id ='maintable'></div>
-    
-    
-    
-        <!--ページングボタン配置-->
-        <h3 class="section-title">ページング</h3>
-        <footer>
-          <div id="paging">
-            <table>
-              <tr>
-                <tb><button id="prevbtn" type="button"><</button></tb>
-                  <tb>
-                    <span id="currentpage">currentpage</span>
-                      /
-                    <span id="lastpage">lastpage</span>
-                  </tb>
-                <tb><button id="nextbtn" type="button">></button></tb>
-              </tr>
-            </table>
-          </div>
-        </footer>
-    
-    
- 
-        
-        <script>
-        var json =[     //jsonサンプルデータ
-        {
-            "temp":"23.1",
-            "hsrisk":0,
-            "rhumid":"52.1",
-            "client_id":"352656101505306",
-            "timestamp":1612941110445,
-            "drisk":3,
-            "WBGT":"19.7"
-        },
-        {
-            "temp":"25.7",
-            "hsrisk":1,
-            "rhumid":"52.6",
-            "client_id":"352656101505306",
-            "timestamp":1612847368464,
-            "drisk":3,
-            "WBGT":"22.1"
-        },
-        {
-            "temp":"25.8",
-            "hsrisk":1,
-            "rhumid":"52.6",
-            "client_id":"352656101505306",
-            "timestamp":1612847308434,
-            "drisk":3,
-            "WBGT":"22.2"
-        }
-        ]
-    
-          // table要素を生成
-         
-          var table = document.createElement('table');
-          console.log("console test3");    //console test
-    
-          // ヘッダーを作成
-          var tr = document.createElement('tr');
-          for (key in json[0]) {
-                // th要素を生成
-                var th = document.createElement('th');
-                // th要素内にテキストを追加
-                th.textContent = key;
-                // th要素をtr要素の子要素に追加
-                tr.appendChild(th);
-                
-                
-                //0224 consoleで途中確認　keyとは
-                console.log("key =  " + key);
-                }
-                console.log("jsonとは");
-                console.log(json);
-
-
-
-            // tr要素をtable要素の子要素に追加
-            table.appendChild(tr);
-    
-          // テーブル本体を作成
-          for (var i = 0; i < json.length; i++) {
-            // tr要素を生成
-            var tr = document.createElement('tr');
-            // th・td部分のループ
-            for (key in json[0]) {
-                  // td要素を生成
-                  var td = document.createElement('td');
-                  // td要素内にテキストを追加
-                  td.textContent = json[i][key];
-                  // td要素をtr要素の子要素に追加
-                  tr.appendChild(td);
-                }
-            // tr要素をtable要素の子要素に追加
-            table.appendChild(tr);
-            }
-          // 生成したtable要素を追加する
-          document.getElementById('maintable').appendChild(table);
-        </script>
-    
-    
-        <script>// ページング機能
-        jQuery(function($) {
-          var page = 0;
-          var displayrows = 30;// １ページ当たり表示する行の数
-    
-          function draw() {// ページの表示
-            $('#lastpage').html(Math.ceil(($('tr').size()-1)/displayrows));
-            $('#currentpage').html(page + 1);
-            $('tr').hide();
-            $('tr:first,tr:gt(' + page * displayrows + '):lt(' + displayrows + ')').show();// 変数を使用する場合は' +  + 'を忘れずに
-          }
-          $('#prevbtn').click(function() {// １ページ後進
-            if (page > 0) {
-              page--;
-              draw();
-            }
-          });
-          $('#nextbtn').click(function() {// １ページ前進
-            if (page < ($('tr').size() - 1) /displayrows - 1) {
-              page++;
-              draw();
-            }
-          });
-          draw();//初回表示
-        });
-        </script>
-      </body>
-
-
-
-
-
-      <!--20210224 追加-->
-      
-      <h3 class="section-title">テーブル生成</h3>
-
-      <body>
-          <!--テーブル生成位置-->
-          <div id ='maintable2'></div>
-      
-      
-      
-          <!--ページングボタン配置-->
-          <h3 class="section-title">ページング</h3>
-          <footer>
-            <div id="paging">
-              <table>
-                <tr>
-                  <tb><button id="prevbtn" type="button"><</button></tb>
-                    <tb>
-                      <span id="currentpage">currentpage</span>
-                        /
-                      <span id="lastpage">lastpage</span>
-                    </tb>
-                  <tb><button id="nextbtn" type="button">></button></tb>
-                </tr>
-              </table>
-            </div>
-          </footer>
-  
-  
-      <script>
-        $(function() {
-          $.getJSON("data3.json" , function(data) {
-            var json = data;
-
-            console.log("dataとは");  //console check
-            console.log(data);
-            console.log("Jsonとは");
-            console.log(json);
-            console.log(json.length);
-
-
-            // table要素を生成
-            var table = document.createElement('table');
-        
-            // ヘッダーを作成
-            var tr = document.createElement('tr');
-            for (key in json[0]) {
-              // th要素を生成
-              var th = document.createElement('th');
-              // th要素内にテキストを追加
-              th.textContent = key;
-              // th要素をtr要素の子要素に追加
-              tr.appendChild(th);
-              }
-            // tr要素をtable要素の子要素に追加
-            table.appendChild(tr);
-    
-            // テーブル本体を作成
-            for (var i = 0; i < json.length; i++) {
-                // tr要素を生成
-                var tr = document.createElement('tr');
-                // th・td部分のループ
-                for (key in json[0]) {
-                  // td要素を生成
-                  var td = document.createElement('td');
-                  // td要素内にテキストを追加
-                  td.textContent = json[i][key];
-                  // td要素をtr要素の子要素に追加
-                  tr.appendChild(td);
-                }
-            // tr要素をtable要素の子要素に追加
-            table.appendChild(tr);
-            }
-            // 生成したtable要素を追加する
-            document.getElementById('maintable2').appendChild(table);
-            
-    
-          });
-        }); 
-    
-      </script>
-      </body>
-  
-  
-
-    
-　<!--20210210 追加-->
-<title>html5 + js で json ファイルにアクセスしてデータを取得する</title>
-<h3 class="section-title">html5 + js で json ファイルにアクセスしてデータを取得する</h3>
-<script>
-function getJSON() {
- var req = new XMLHttpRequest(); // XMLHttpRequest オブジェクトを生成する
- req.onreadystatechange = function() { // XMLHttpRequest オブジェクトの状態が変化した際に呼び出されるイベントハンドラ
- if(req.readyState == 4 && req.status == 200){ // サーバーからのレスポンスが完了し、かつ、通信が正常に終了した場合
-
- var data = JSON.parse(req.responseText); // 取得した JSON ファイルの中身を変数へ格納
- var len = data.length; // JSON のデータ数を取得
-
- // JSON のデータ数分処理
- for(var i=0; i<len; i++) {
- console.log("id: " + data[i].id + ", name: " + data[i].name);
- }
-
- }
- };
- req.open("GET", "sample2.json", false); // HTTPメソッドとアクセスするサーバーのURLを指定
- req.send(null); // 実際にサーバーへリクエストを送信
-}
-</script>
-
-<body>
-<input type="button" value="JSONファイルを取得し、内容をブラウザのコンソールへ出力" onclick="getJSON();">
-</body>
-
-
-
-<head>
-  <h3 class="section-title">data.jsonを参照してリスト表示</h3>
-<meta charset="UTF-8">
-
-<script>//jquery削除
-$(function() {
-  $.getJSON("data.json" , function(data) {
-    var
-      ulObj = $("#demo"),
-      len = data.length;
-
-    for(var i = 0; i < len; i++) {
-      ulObj.append($("<li>").attr({"id":data[i].id}).text(data[i].name));
-    }
-  });
-});
-</script>
-</head>
-<body>
-<ul id="demo"></ul>
-</body>
-
-
-<head>
-  <h3 class="section-title">data２.jsonを参照してリスト表示</h3>
-  <meta charset="UTF-8">
-
-  <script>
-  $(function() {
-    $.getJSON("data2.json" , function(data) {
-      var
-        ulObj = $("#demo"),
-        len = data.length;　　
-  
-      for(var i = 0; i < len; i++) 
-      {
-        ulObj.append($("<li>").attr(data[i].key).text(data[i].value));  ////0224 editted
-
-      }
-    });
-  });
-  </script>
-  </head>
-  <body>
-  <ul id="demo"></ul>
-  </body>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
       <!-- お問い合わせ -->
@@ -401,16 +65,15 @@ $(function() {
         <h3 class="section-title">お問い合わせ</h3>
         <p>メールアドレス（必須）</p>
         <!-- <input>要素を追加してください -->
-        <input>
-        
+        <input />
+
         <p>お問い合わせ内容（必須）</p>
         <!-- <textarea>要素を追加してください -->
         <textarea></textarea>
-        
+
         <p>※必須項目は必ずご入力ください</p>
         <!-- <input>要素を追加してください -->
         <input class="contact-submit" type="submit" value="送信" />
-        
       </div>
     </div>
 
