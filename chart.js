@@ -1,5 +1,5 @@
 var chart = bb.generate({
-    
+    bindto: "#chart",
     data: {
         columns: [
             ["data1", 30, 200, 100, 170, 150, 250],
@@ -14,7 +14,4 @@ var chart = bb.generate({
             data2: "green"
         }
     }
-    bindto: "#chart",
 });
-
-
