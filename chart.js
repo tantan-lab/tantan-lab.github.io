@@ -1,4 +1,4 @@
-bb.generate({
+var chart = bb.generate({
     bindto: "#chart",
     data: {
         columns: [
@@ -6,12 +6,14 @@ bb.generate({
             ["data2", 130, 100, 140, 35, 110, 150]
         ],
         types: {
-          data1: "spline",
-          data2: "area-spline"
+            data1: "spline",
+            data2: "area-spline"
         },
         colors: {
-          data1: "red",
-          data2: "green"
+            data1: "red",
+            data2: "green"
         }
     }
 });
+
+
