@@ -42,6 +42,7 @@ body {
 .right-column {
   /* メインコンテンツ */
   width: 90%;
+  padding: 20px;
 }
   .main {
     padding: 100px 80px;
