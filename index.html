@@ -71,7 +71,7 @@
             </div>
           </div>
 
-          <!-- グラフ -->
+          <!-- グラフ1 -->
           <div class="contents">
             <h3 class="section-title">グラフ</h3>
             <div class="contents-item">
@@ -98,31 +98,8 @@
             </div>
           </div>
 
-          <!-- グラフ -->
-          <div class="contents">
-            <h3 class="section-title">グラフ2</h3>
-            <div class="contents-item">
-              <div id="chart"></div>
-              <script>
-                $(function () {
-                  $.getJSON("data4.json", function (data) {
-                    var json = data; ////0315
-                  });
-                });
-                bb.generate({
-                  bindto: "#chart",
-                  types: {
-                    data1: "spline",
-                    data2: "area-spline",
-                  },
-                  colors: {
-                    data1: "red",
-                    data2: "green",
-                  },
-                });
-              </script>
-            </div>
-          </div>
+          <!-- グラフ2 -->
+
 
           <!-- お問い合わせ -->
           <div class="contact-form">
