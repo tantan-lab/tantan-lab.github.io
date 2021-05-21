@@ -42,7 +42,7 @@
             <h3 class="section-title">学べるWBGT</h3>
             <div class="contents-item">
               <img
-                src="noldic.svg"
+                src="https://s3-ap-northeast-1.amazonaws.com/progate/shared/images/lesson/html/study/html.svg"
               />
               <p>暑さ指数</p>
             </div>
@@ -76,8 +76,8 @@
                   bindto: "#chart",
                   data: {
                     columns: [
-                      ["data1", 30, 200, 100, 170, 150, 250],
-                      ["data2", 130, 100, 140, 35, 110, 150],
+                      ["温度(℃)", 22, 22, 23, 24, 24, 24, 23, 23, 22, 22],
+                      ["湿度(％)", 53, 51, 46, 44, 44, 46, 51, 55, 59, 61],
                     ],
                     types: {
                       data1: "spline",
@@ -93,7 +93,63 @@
             </div>
           </div>
 
+          <!-- グラフ２ -->
+          <div class="contents">
+            <h3 class="section-title">グラフ2</h3>
+            <div class="contents-item">
+              <div id="chart"></div>
+              <script>
+                $(function () {
+                  $.getJSON("data4.json", function (data) {
+                    var json = data; ////0315
+                  });
+                });
+                bb.generate({
+                  bindto: "#chart",
+                  types: {
+                    data1: "spline",
+                    data2: "area-spline",
+                  },
+                  colors: {
+                    data1: "red",
+                    data2: "green",
+                  },
+                });
+              </script>
+            </div>
+          </div>
 
+          <!-- グラフ1 -->
+          <div class="contents">
+            <h3 class="section-title">グラフ</h3>
+            <div class="contents-item">
+              <div id="chart"></div>
+              <script>
+                bb.generate({
+                  bindto: "#chart",
+                  $(function () {
+                  $.getJSON("data4.json", function (data) {
+                    var json = data; ////0315
+                  });
+                });
+                  data: {
+                    columns: [
+                      ["温度(℃)", 22, 22, 23, 24, 24, 24, 23, 23, 22, 22];
+                      ["湿度(％)", 53, 51, 46, 44, 44, 46, 51, 55, 59, 61];
+                    ];
+                    types: {
+                      data1: "spline";
+                      data2: "area-spline";
+                    };
+                    colors: {
+                      data1: "red";
+                      data2: "green";
+                    };
+                  };
+                });
+              </script>
+            </div>
+          </div>
 
           <!-- お問い合わせ -->
           <div class="contact-form">
