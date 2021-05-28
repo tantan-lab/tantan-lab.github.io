@@ -109,7 +109,29 @@
 
           <!-- グラフ3 左右にラベル -->
           <div class="contents">
-            <h3 class="section-title">左右ラベルグラフ</h3>
+            <h3 class="section-title">左右ラベルグラフ１</h3>
+            <div class="contents-item">
+              <div id="chart"></div>
+              <script>
+                var chart = bb.generate({
+                  data: {
+                    columns: [
+                      ["data1", 30, 200, 100, 400, 150, 250],
+                      ["data2", 50, 20, 10, 40, 15, 25],
+                    ],
+                    type: "line",
+                    axes: { data1: "y", data2: "y2" },
+                  },
+                  axis: { y2: { show: true } },
+                  bindto: "#additionalYAxis",
+                });
+              </script>
+            </div>
+          </div>
+
+          <!-- グラフ3 左右にラベル -->
+          <div class="contents">
+            <h3 class="section-title">左右ラベルグラフ２</h3>
             <div class="contents-item">
               <div id="chart"></div>
               <script>
@@ -129,6 +151,7 @@
             </div>
           </div>
 
+
           <!-- お問い合わせ -->
           <div class="contact-form">
             <h3 class="section-title">お問い合わせ</h3>
@@ -145,6 +168,7 @@
         </div>
       </div>
     </div>
+
     <!-- フッター　オレンジバー -->
     <div class="footer">
       <div class="footer-logo">tantan-lab</div>
