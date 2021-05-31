@@ -23,6 +23,7 @@
         </ul>
       </div>
     </div>
+
     <!-- メイン -->
     <!-- 画面分割 -->
     <div id="wrapper">
@@ -35,6 +36,7 @@
           <div class="copy-container">
             <h1>HELLO WORLD<span>.</span></h1>
           </div>
+
           <!-- 学べるWBGT -->
           <div class="contents">
             <h3 class="section-title">学べるWBGT</h3>
@@ -58,7 +60,7 @@
             <div class="contents-item">
               <div id="chart"></div>
               <script>
-                bb.generate({
+                var chart = bb.generate({
                   bindto: "#chart",
                   data: {
                     columns: [
@@ -139,7 +141,7 @@
                       ["温度(℃)", 22, 22, 23, 24, 24, 24, 23, 23, 22, 22],
                       ["湿度(％)", 53, 51, 46, 44, 44, 46, 51, 55, 59, 61],
                     ],
-                    type: "line",
+                    type: "spline",
                     axes: { data1: "y", data2: "y2" },
                   },
                   axis: { y2: { show: true } },
@@ -148,7 +150,6 @@
               </script>
             </div>
           </div>
-
 
           <!-- お問い合わせ -->
           <div class="contact-form">
